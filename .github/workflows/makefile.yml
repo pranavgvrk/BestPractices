@@ -22,6 +22,8 @@ jobs:
         make html
         pwd
         git status
-        git checkout -b Publish
-        git pull origin/Publish Publish
+        git fetch origin Publish
+        git checkout Publish
+        echo "Copying..."
+        cp build/html/* /docs/
         git status
