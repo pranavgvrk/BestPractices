@@ -34,7 +34,6 @@ jobs:
         git status
         git add -A
         git status
-        rm -r build/
     - name: Commit and push
       run: |
         git config  user.name "github-actions"
