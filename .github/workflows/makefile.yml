@@ -10,30 +10,26 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
       
     - name: Configure
       run: pip install sphinx
       
-    - name: Install dependencies
+    - name: make HTML
       run: |
         make html
-        pwd
-        git status
+    - name: Checkout Publish
+      run: |
         git fetch origin Publish
         git checkout Publish
-        echo "Before Copy..."
-        ls -l docs/
-        echo "Copy ..."
+        git pull
+    - name: Copy build artifacts
+      run: |
         cp -r build/html/* docs/
-        echo "After Copy..."
-        ls -l docs/
         git add -A
-        echo "Commit ..."
-        git config  user.name "github ci"
+    - name: Commit and push
+      run: |
+        git config  user.name "github-actions"
         git commit -am "Add new build files"
-        echo "Push..."
-        echo ${{ secrets.GITHUB_TOKEN }}
         git push
