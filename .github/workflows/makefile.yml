@@ -21,11 +21,11 @@ jobs:
         make html
     - name: Checkout Publish
       run: |
-        ls -l build/html
+        ls -l
         git fetch origin Publish
         git checkout Publish
         git pull
-        ls -l docs/
+        ls -l
     - name: Copy build artifacts
       run: |
         cp -r build/html/* docs/
