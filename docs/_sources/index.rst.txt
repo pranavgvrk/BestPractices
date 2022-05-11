@@ -10,7 +10,7 @@ Welcome to Best Practices Documents's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+How to make this Page?
 
 Indices and tables
 ==================
