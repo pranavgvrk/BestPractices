@@ -40,5 +40,6 @@ jobs:
     - uses: quangvo09/pull-request-action@v1
       with: 
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch_prefix: actions_branch
         base_branch: Publish
       name: Create PR
