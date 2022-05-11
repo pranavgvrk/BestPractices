@@ -22,9 +22,7 @@ jobs:
     - name: Checkout Publish
       run: |
         ls -l
-        git fetch origin Publish
-        git checkout Publish
-        git pull
+        git checkout -b actions_branch origin/Publish
         ls -l
     - name: Copy build artifacts
       run: |
@@ -38,4 +36,5 @@ jobs:
       run: |
         git config  user.name "github-actions"
         git commit -am "Add new build files"
-        git push
+        git push --set-upstream=actions_branch actions_branch
+        git --help
