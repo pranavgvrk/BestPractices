@@ -37,5 +37,5 @@ jobs:
       run: |
         git config  user.name "github-actions"
         git commit -am "Add new build files"
-        git push --set-upstream=actions_branch actions_branch
+        git push
         git --help
