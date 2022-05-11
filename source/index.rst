@@ -7,12 +7,19 @@ Welcome to Best Practices Documents's documentation!
 ====================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
+   GitHub_Pages
+   Docker_BestPractices
+   K8S_BestPractices
 
-Indices and tables
-==================
+.. _Docker_BSP:
 
-* :ref:`genindex`
-* :ref:`search`
+Section to cross-reference
+--------------------------
+
+This is the text of the section.
+
+It refers to the section itself, see :ref:`Docker_BSP`.
+
