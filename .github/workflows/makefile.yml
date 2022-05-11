@@ -24,10 +24,8 @@ jobs:
         git status
         git fetch origin Publish
         git checkout Publish
-        echo "Copying..."
-        pwd
-        ls -l
         cp -r build/html/* docs/
-        git commit -am "Add new build files"
+        echo "Commit ..."
         git config  user.name "github ci"
+        git commit -am "Add new build files"
         git push
