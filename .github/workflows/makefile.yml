@@ -13,29 +13,32 @@ jobs:
     - uses: actions/checkout@v3
       
     - name: Configure
-      run: |
-        git pull-request
-#      pip install sphinx
+      run: pip install sphinx
       
-#    - name: make HTML
-#      run: |
-#        make html
-#    - name: Checkout Publish
-#      run: |
-#        ls -l
-#        git fetch --all
-#        git checkout -b actions_branch origin/Publish
-#        ls -l
-#    - name: Copy build artifacts
-#      run: |
-#        cp -r build/html/* docs/
-#        ls -l
-#        rm -r build/
-#        git status
-#        git add -A
-#        git status
-#    - name: Commit and push
-#      run: |
-#        git config  user.name "github-actions"
-#        git commit -am "Add new build files"
-#        git push origin HEAD
+    - name: make HTML
+      run: |
+        make html
+    - name: Checkout Publish
+      run: |
+        ls -l
+        git fetch --all
+        git checkout -b actions_branch origin/Publish
+        ls -l
+    - name: Copy build artifacts
+      run: |
+        cp -r build/html/* docs/
+        ls -l
+        rm -r build/
+        git status
+        git add -A
+        git status
+    - name: Commit and push
+      run: |
+        git config  user.name "github-actions"
+        git commit -am "Add new build files"
+        git push origin HEAD
+    - uses: peter-evans/create-pull-request@v4
+      with: 
+        token: ${{ GITHUB_TOKEN }}
+      name: Create PR
+      
