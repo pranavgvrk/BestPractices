@@ -22,6 +22,7 @@ jobs:
     - name: Checkout Publish
       run: |
         ls -l
+        git fetch --all
         git checkout -b actions_branch origin/Publish
         ls -l
     - name: Copy build artifacts
