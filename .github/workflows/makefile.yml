@@ -24,9 +24,13 @@ jobs:
         git status
         git fetch origin Publish
         git checkout Publish
-        ls docs/
+        echo "Before Copy..."
+        ls -l docs/
+        echo "Copy ..."
         cp -r build/html/* docs/
-        ls docs/
+        echo "After Copy..."
+        ls -l docs/
+        git add -A
         echo "Commit ..."
         git config  user.name "github ci"
         git commit -am "Add new build files"
