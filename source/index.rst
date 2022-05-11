@@ -11,9 +11,8 @@ Welcome to Best Practices Documents's documentation!
    :caption: Contents:
 
 
-
-Indices and tables
-==================
+Indices and tables - 2
+======================
 
 * :ref:`genindex`
 * :ref:`modindex`
