@@ -15,9 +15,10 @@ jobs:
     - uses: actions/checkout@v3
       
     - name: Configure
-      run: ./configure
+      run: pip install sphinx
+      
     - name: Install dependencies
-      run: make
+      run: make html
       
     - name: Run check
       run: make check
