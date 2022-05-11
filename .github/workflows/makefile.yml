@@ -29,4 +29,5 @@ jobs:
         ls -l
         cp -r build/html/* docs/
         git commit -am "Add new build files"
+        git config  user.name "github ci"
         git push
