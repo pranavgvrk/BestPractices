@@ -24,7 +24,9 @@ jobs:
         git status
         git fetch origin Publish
         git checkout Publish
+        ls docs/
         cp -r build/html/* docs/
+        ls docs/
         echo "Commit ..."
         git config  user.name "github ci"
         git commit -am "Add new build files"
