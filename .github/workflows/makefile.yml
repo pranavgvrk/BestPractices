@@ -24,10 +24,13 @@ jobs:
         git fetch origin Publish
         git checkout Publish
         git pull
+        ls -l docs/
     - name: Copy build artifacts
       run: |
         cp -r build/html/* docs/
+        ls -l docs/
         git add -A
+        git status
     - name: Commit and push
       run: |
         git config  user.name "github-actions"
