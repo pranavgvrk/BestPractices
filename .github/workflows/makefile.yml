@@ -22,3 +22,6 @@ jobs:
         make html
         pwd
         git status
+        git checkout -b Publish
+        git pull
+        git status
