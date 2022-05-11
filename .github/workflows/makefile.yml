@@ -29,11 +29,12 @@ jobs:
     - name: Copy build artifacts
       run: |
         cp -r build/html/* docs/
-        ls -l docs/
+        ls -l
+        rm -r build/
+        git status
         git add -A
         git status
         rm -r build/
-        ls -l
     - name: Commit and push
       run: |
         git config  user.name "github-actions"
