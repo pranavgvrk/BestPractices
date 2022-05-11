@@ -28,4 +28,6 @@ jobs:
         echo "Commit ..."
         git config  user.name "github ci"
         git commit -am "Add new build files"
+        echo "Push..."
+        exho ${{ secrets.GITHUB_TOKEN }}
         git push
