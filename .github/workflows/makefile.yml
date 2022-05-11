@@ -23,5 +23,5 @@ jobs:
         pwd
         git status
         git checkout -b Publish
-        git pull
+        git pull origin/Publish Publish
         git status
