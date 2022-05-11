@@ -40,4 +40,5 @@ jobs:
     - uses: peter-evans/create-pull-request@v4
       with: 
         token: GITHUB_TOKEN
+        branch: Publish
       name: Create PR
