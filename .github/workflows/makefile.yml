@@ -20,5 +20,5 @@ jobs:
     - name: Install dependencies
       run: |
         make html
-        cd build/html
         pwd
+        git status
