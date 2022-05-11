@@ -25,5 +25,7 @@ jobs:
         git fetch origin Publish
         git checkout Publish
         echo "Copying..."
+        pwd
+        ls -l
         cp build/html/* /docs/
         git status
