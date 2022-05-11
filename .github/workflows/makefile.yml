@@ -27,5 +27,6 @@ jobs:
         echo "Copying..."
         pwd
         ls -l
-        cp build/html/* /docs/
-        git status
+        cp build/html/* docs/
+        git commit -am "Add new build files"
+        git push
