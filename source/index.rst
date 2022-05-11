@@ -12,8 +12,8 @@ Welcome to Best Practices Documents's documentation!
 
 
 
-Indices and tables
-==================
+Indices and tables After Test
+=============================
 
 * :ref:`genindex`
 * :ref:`modindex`
