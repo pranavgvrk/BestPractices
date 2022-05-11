@@ -37,8 +37,8 @@ jobs:
         git config  user.name "github-actions"
         git commit -am "Add new build files"
         git push origin HEAD
-    - uses: peter-evans/create-pull-request@v4
+    - uses: quangvo09/pull-request-action@v1
       with: 
-        token: GITHUB_TOKEN
-        branch: Publish
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        base_branch: Publish
       name: Create PR
