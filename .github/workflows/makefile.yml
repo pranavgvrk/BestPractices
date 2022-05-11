@@ -22,7 +22,7 @@ jobs:
       run: |
         ls -l
         git fetch --all
-        git checkout -b actions_branch origin/Publish
+        git checkout -b Publish origin/Publish
         ls -l
     - name: Copy build artifacts
       run: |
@@ -36,10 +36,4 @@ jobs:
       run: |
         git config  user.name "github-actions"
         git commit -am "Add new build files"
-        git push origin HEAD
-    - uses: quangvo09/pull-request-action@v1
-      with: 
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch_prefix: actions_branch
-        base_branch: Publish
-      name: Create PR
+        git push
