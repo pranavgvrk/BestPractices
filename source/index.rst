@@ -9,10 +9,10 @@ Welcome to Best Practices Documents's documentation!
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
+   :glob:
 
-   GitHub_Pages
-   Docker_BestPractices
-   K8S_BestPractices
+   best_practice/*
+   how-to/*
 
 .. _Docker_BSP:
 
